@@ -9,8 +9,7 @@ int p(int x){
   for(int i = 0; i < n; i++){
     s = s + (A[i] + x - 1) / x;
   }
-  if(s <= k) return 1;
-  return 0;
+  return s <= k;
 }
 
 int main(){
@@ -23,9 +22,8 @@ int main(){
   for(i = 0; i < n; i++){
     if(A[i] > mx) mx = A[i];
   }
-  lb = 1;
-  ub = mx;
-  if(p(1)) return printf("%d\n", 1);
+  lb = 0;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub)/2;
     if(p(mid)) ub = mid;
