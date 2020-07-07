@@ -14,8 +14,7 @@ int p(int x){
       sum = A[i];
     }
   }
-  if(num <= k) return 1;
-  else return 0;
+  return num <= k;
 }
 
 int main(){
@@ -30,9 +29,8 @@ int main(){
     sum = sum + A[i];
     if(max < A[i]) max = A[i];
   }
-  lb = max;
-  ub = sum;
-  if(p(max)) return printf("%d\n", max);
+  lb = max-1;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
     if(p(mid)) ub = mid;
