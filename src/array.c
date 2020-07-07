@@ -13,11 +13,11 @@ int main(){
   }
   lb = -1;
   ub = n;
-  if(A[n-1] < k) return printf("%d\n", n);
+
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
-    if(A[mid] < k) lb = mid;
-    else ub = mid;
+    if(A[mid] >= k) ub = mid;
+    else lb = mid;
   }
   printf("%d\n", ub);
   return 0;
