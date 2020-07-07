@@ -18,10 +18,7 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  int mx = 0;
-  for(i = 0; i < n; i++){
-    if(A[i] > mx) mx = A[i];
-  }
+  
   lb = 0;
   ub = 1000000000;
   while(ub - lb > 1){
