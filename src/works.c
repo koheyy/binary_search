@@ -24,11 +24,10 @@ int main(){
     scanf("%d", &A[i]);
   }
   int max = 0;
-  int sum = 0;
   for(i = 0; i < n; i++){
-    sum = sum + A[i];
     if(max < A[i]) max = A[i];
   }
+  
   lb = max-1;
   ub = 1000000000;
   while(ub - lb > 1){
